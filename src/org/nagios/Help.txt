@@ -33,10 +33,10 @@ Usage: check_jmx -U url -O object_name -A attribute [-K compound_key] [-I attrib
   verbatim level controlled as a number of v (optional)
 
 -w
-  warning integer value
+  warning value
 
 -c
-  critical integer value
+  critical value
 
 Note that if warning level > critical, system checks object attribute value to be LESS THAN OR EQUAL warning, critical
 If warning level < critical, system checks object attribute value to be MORE THAN OR EQUAL warning, critical
