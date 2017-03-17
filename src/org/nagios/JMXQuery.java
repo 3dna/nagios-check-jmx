@@ -128,6 +128,7 @@ public class JMXQuery {
 
     private int report(PrintStream out) {
         int status;
+        boolean isCrit = criticalThreshold.isAlert(checkData);
         if (criticalThreshold != null && criticalThreshold.isAlert(checkData)) {
             status = RETURN_CRITICAL;
             out.print(CRITICAL_STRING + " ");
@@ -170,7 +171,7 @@ public class JMXQuery {
             String key = (String) it.next();
             if (data.containsKey(key))
                 out.print(key + '=' + data.get(key));
-            if (it.hasNext())
+
                 out.print(';');
         }
         out.print('}');

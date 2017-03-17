@@ -34,7 +34,7 @@ public class Threshold {
     }
 
     public boolean isAlert(Double value) {
-        boolean outsideRange = (value < min || value > min);
+        boolean outsideRange = (value < min || value > max);
         if (thresholdInverted)
             return !outsideRange;
         return outsideRange;
